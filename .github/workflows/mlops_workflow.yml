@@ -20,3 +20,13 @@ jobs:
 
       - name: Download dataset
         run: python download.py
+
+      - name: Upload dataset to hana
+        env:
+          HANA_ADDRESS: ${{ secrets.HANA_ADDRESS }}
+          HANA_USERNAME: ${{ secrets.HANA_USERNAME }}
+          HANA_PASSWORD: ${{ secrets.HANA_PASSWORD }}
+        run: python upload.py
+
+      - name: Remove dataset
+        run: rm housing.csv
