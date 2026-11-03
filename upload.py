@@ -1,8 +1,7 @@
 import os
 import pandas as pd
 import hana_ml.dataframe as dataframe
-
-HANA_ADDRESS= os.environ.get('HANA_ADDRESS')
+HANA_ADDRESS = os.environ.get('HANA_ADDRESS')
 HANA_USERNAME= os.environ.get('HANA_USERNAME')
 HANA_PASSWORD= os.environ.get('HANA_PASSWORD')
 
