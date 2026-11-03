@@ -5,6 +5,10 @@ HANA_ADDRESS = os.environ.get('HANA_ADDRESS')
 HANA_USERNAME= os.environ.get('HANA_USERNAME')
 HANA_PASSWORD= os.environ.get('HANA_PASSWORD')
 
+print(f"DEBUG ADDRESS: {HANA_ADDRESS}")
+print(f"DEBUG USER: {HANA_USERNAME}")
+print(f"DEBUG PASSWORD LENGTH: {len(HANA_PASSWORD) if HANA_PASSWORD else 'ESTA VACIO'}")
+
 conn = dataframe.ConnectionContext(address=HANA_ADDRESS,
                                    port=443, 
                                    user=HANA_USERNAME, 
